@@ -3,7 +3,7 @@ pipeline {
     agent any
      stages
     {
-        stage('Download')
+        stage('Download_Loans')
         {
             steps 
             {
@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage('Build') 
+        stage('Build_Loans') 
         {
             steps 
             
