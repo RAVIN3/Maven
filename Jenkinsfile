@@ -1,24 +1,30 @@
-pipeline {
-    
-    agent any
-     stages
+@Library('mylibrary')_
+pipeline
+{
+    agent any 
+    stages
     {
-        stage('Download')
+        stage('Download_loans')
         {
-            steps 
+            steps
             {
-                git 'https://github.com/IntelliqDevops/maven.git'
+                script
+                {
+                    cicd.gitDownload("maven")
+                }
             }
         }
-
-        stage('Build') 
+        
+        stage('Build_loans')
         {
-            steps 
-            
+            steps
             {
-                sh 'mvn package'
+                script
+                {
+                    cicd.buildArtifect()
+                }
             }
+        } 
         }
-
-    }
-}
+   }
+}   
