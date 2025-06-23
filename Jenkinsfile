@@ -4,18 +4,18 @@ pipeline
     agent any 
     stages
     {
-        stage('Download')
+        stage('Download_Master')
         {
             steps
             {
                 script
                 {
-                    cicd.gitDownload("maven")
+                    cicd.gitDownload("Maven")
                 }
             }
         }
         
-        stage('Build')
+        stage('Build_Master')
         {
             steps
             {
@@ -25,7 +25,7 @@ pipeline
                 }
             }
         } 
-        stage('Deployment')
+        stage('Deployment_Master')
         {
             steps
             {
@@ -35,7 +35,7 @@ pipeline
                 }
             }
         }
-        stage('Testing')
+        stage('Testing_Master')
         {
             steps
             {
@@ -45,7 +45,7 @@ pipeline
                 }
             }
         }
-        stage('Delivery')
+        stage('Delivery_Master')
         {
            steps
            {
