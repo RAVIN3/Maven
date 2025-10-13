@@ -31,7 +31,7 @@ pipeline
             {
                 script
                 {
-                    cicd.deployTomcat("MultiBranchPipeline_master", "172.31.2.159","testapp")
+                    cicd.deployTomcat("MultiBranchPipeline_master", "172.31.17.237","testapp")
                 }
             }
         }
@@ -51,7 +51,7 @@ pipeline
            {
                script
                {
-                   cicd.delivery("DeclarativePipelineWithSharedLibrary","172.31.2.253","prodapp")
+                   cicd.delivery("DeclarativePipelineWithSharedLibrary","172.31.20.10","prodapp")
                }
            }
         }
